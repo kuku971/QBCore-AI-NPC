@@ -1,5 +1,16 @@
 # Pe0ny9-AI-NPC System
 
+<div align="center">
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![FiveM](https://img.shields.io/badge/FiveM-QBCore-orange.svg)
+![AI](https://img.shields.io/badge/AI-Ollama-purple.svg)
+![Language](https://img.shields.io/badge/language-Lua-blueviolet.svg)
+[![GitHub Stars](https://img.shields.io/github/stars/Pe0ny9-A/QBCore-AI-NPC?style=social)](https://github.com/Pe0ny9-A/QBCore-AI-NPC)
+
+</div>
+
 > AI-Powered NPC System for QBCore with Ollama Integration
 
 English | [中文](README.md)
