@@ -1,0 +1,59 @@
+{
+  "language": "English",
+  "code": "en",
+  
+  "common": {
+    "save": "Save", "cancel": "Cancel", "delete": "Delete", "edit": "Edit",
+    "create": "Create", "close": "Close", "confirm": "Confirm", "back": "Back",
+    "next": "Next", "previous": "Previous", "loading": "Loading", "search": "Search",
+    "enabled": "Enabled", "disabled": "Disabled", "yes": "Yes", "no": "No"
+  },
+  
+  "menu": {
+    "admin_panel": "AI-NPC Management System",
+    "dashboard": "Dashboard",
+    "npc_list": "NPC List",
+    "create_npc": "Create NPC",
+    "dialogue_history": "Dialogue History",
+    "relationships": "Relationships",
+    "statistics": "Statistics"
+  },
+  
+  "npc": {
+    "name": "Name", "model": "Model", "occupation": "Occupation", "location": "Location",
+    "status": "Status", "personality": "Personality", "age": "Age", "gender": "Gender",
+    "male": "Male", "female": "Female", "backstory": "Backstory"
+  },
+  
+  "wizard": {
+    "title": "Create NPC Wizard",
+    "step1": "Basic Info", "step2": "Location", "step3": "Personality",
+    "step4": "Occupation", "step5": "Dialogue", "step6": "Advanced",
+    "use_current_position": "Use Current Position",
+    "ai_generate": "AI Generate"
+  },
+  
+  "dialogue": {
+    "chat_with": "Chat with {name}",
+    "type_message": "Type a message...",
+    "send": "Send",
+    "thinking": "Thinking...",
+    "emotion": "Emotion"
+  },
+  
+  "notify": {
+    "npc_created": "NPC created successfully",
+    "npc_updated": "NPC updated successfully",
+    "npc_deleted": "NPC deleted successfully",
+    "permission_denied": "Permission denied",
+    "too_far": "Too far from NPC",
+    "ollama_error": "AI service connection failed"
+  },
+  
+  "command": {
+    "npcadmin": "Open admin panel",
+    "createnpc": "Create NPC",
+    "editnpc": "Edit NPC",
+    "deletenpc": "Delete NPC"
+  }
+}

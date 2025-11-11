@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-NPC System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 对话界面 -->
+    <div id="dialogue-container" class="container hidden">
+        <div class="dialogue-header">
+            <div class="npc-info">
+                <h2 id="npc-name">NPC Name</h2>
+                <span id="npc-occupation">Occupation</span>
+            </div>
+            <div class="relationship-info">
+                <span id="relationship-level">关系: 陌生人</span>
+            </div>
+            <button class="close-btn" onclick="closeDialogue()">×</button>
+        </div>
+        
+        <div id="messages" class="messages"></div>
+        
+        <div class="input-area">
+            <input type="text" id="message-input" placeholder="输入消息..." maxlength="500">
+            <button onclick="sendMessage()">发送</button>
+        </div>
+    </div>
+
+    <!-- 管理面板 -->
+    <div id="admin-panel" class="container admin-panel hidden">
+        <div class="panel-header">
+            <h1>AI-NPC 管理系统</h1>
+            <button class="close-btn" onclick="closePanel()">×</button>
+        </div>
+        
+        <div class="panel-content">
+            <div class="panel-sidebar">
+                <button class="sidebar-btn active" onclick="showTab('dashboard')">仪表板</button>
+                <button class="sidebar-btn" onclick="showTab('npc-list')">NPC列表</button>
+                <button class="sidebar-btn" onclick="openCreateWizard()">创建NPC</button>
+            </div>
+            
+            <div class="panel-main">
+                <!-- 仪表板 -->
+                <div id="tab-dashboard" class="tab-content active">
+                    <h2>仪表板</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3 id="total-npcs">0</h3>
+                            <p>NPC总数</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 id="active-npcs">0</h3>
+                            <p>活跃NPC</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- NPC列表 -->
+                <div id="tab-npc-list" class="tab-content">
+                    <h2>NPC列表</h2>
+                    <div id="npc-list-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 创建向导 -->
+    <div id="create-wizard" class="container wizard hidden">
+        <div class="wizard-header">
+            <h2>创建NPC - 步骤 <span id="wizard-step">1</span>/6</h2>
+            <button class="close-btn" onclick="closeWizard()">×</button>
+        </div>
+        
+        <div class="wizard-content">
+            <!-- 步骤1：基础信息 -->
+            <div id="step-1" class="wizard-step active">
+                <h3>基础信息</h3>
+                <div class="form-group">
+                    <label>NPC名字</label>
+                    <input type="text" id="npc-name" placeholder="输入NPC名字">
+                </div>
+                <div class="form-group">
+                    <label>模型</label>
+                    <select id="npc-model"></select>
+                </div>
+                <div class="form-group">
+                    <label>性别</label>
+                    <select id="npc-gender">
+                        <option value="male">男</option>
+                        <option value="female">女</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>年龄: <span id="age-value">30</span></label>
+                    <input type="range" id="npc-age" min="18" max="80" value="30">
+                </div>
+            </div>
+            
+            <!-- 步骤2：位置 -->
+            <div id="step-2" class="wizard-step">
+                <h3>位置设置</h3>
+                <button onclick="useCurrentPosition()">使用当前位置</button>
+                <div class="form-group">
+                    <label>X坐标</label>
+                    <input type="number" id="pos-x" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label>Y坐标</label>
+                    <input type="number" id="pos-y" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label>Z坐标</label>
+                    <input type="number" id="pos-z" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label>朝向</label>
+                    <input type="number" id="pos-heading" min="0" max="360" value="0">
+                </div>
+            </div>
+            
+            <!-- 步骤3：性格 -->
+            <div id="step-3" class="wizard-step">
+                <h3>性格配置</h3>
+                <div class="form-group">
+                    <label>预设性格</label>
+                    <select id="personality-preset"></select>
+                </div>
+            </div>
+            
+            <!-- 步骤4：职业 -->
+            <div id="step-4" class="wizard-step">
+                <h3>职业背景</h3>
+                <div class="form-group">
+                    <label>职业</label>
+                    <select id="npc-occupation"></select>
+                </div>
+                <div class="form-group">
+                    <label>背景故事</label>
+                    <textarea id="npc-backstory" rows="4" placeholder="描述NPC的背景故事..."></textarea>
+                </div>
+            </div>
+            
+            <!-- 步骤5：对话 -->
+            <div id="step-5" class="wizard-step">
+                <h3>对话设置</h3>
+                <div class="form-group">
+                    <label>对话风格</label>
+                    <select id="dialogue-style">
+                        <option value="casual">随意</option>
+                        <option value="formal">正式</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- 步骤6：完成 -->
+            <div id="step-6" class="wizard-step">
+                <h3>确认创建</h3>
+                <p>请确认NPC信息无误，然后点击创建。</p>
+                <div id="npc-preview"></div>
+            </div>
+        </div>
+        
+        <div class="wizard-footer">
+            <button onclick="prevStep()" id="prev-btn" disabled>上一步</button>
+            <button onclick="nextStep()" id="next-btn">下一步</button>
+            <button onclick="createNPC()" id="create-btn" class="hidden">创建</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
